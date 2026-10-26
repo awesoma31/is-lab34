@@ -46,11 +46,11 @@ docker run --rm --network labnet -v "$PWD:/zap/wrk:rw" \
 
 | # | Находка | Risk | CWE | OWASP Top 10 |
 |---|---|---|---|---|
-| 1 | Content Security Policy (CSP) Header Not Set | Medium | CWE-693 | A05:2021 — Security Misconfiguration |
-| 2 | CORS Misconfiguration | Medium | CWE-942 | A05:2021 — Security Misconfiguration |
-| 3 | Cross-Domain Misconfiguration | Medium | CWE-264 | A05:2021 — Security Misconfiguration |
-| 4 | Backup File Disclosure | Medium | CWE-530 | A05:2021 — Security Misconfiguration |
-| 5 | Bypassing 403 | Medium | CWE-348 | A01:2021 — Broken Access Control |
+| 1 | Content Security Policy (CSP) Header Not Set | Medium | CWE-693 | A02:2025 — Security Misconfiguration |
+| 2 | CORS Misconfiguration | Medium | CWE-942 | A02:2025 — Security Misconfiguration |
+| 3 | Cross-Domain Misconfiguration | Medium | CWE-264 | A02:2025 — Security Misconfiguration |
+| 4 | Backup File Disclosure | Medium | CWE-530 | A02:2025 — Security Misconfiguration |
+| 5 | Bypassing 403 | Medium | CWE-348 | A01:2025 — Broken Access Control |
 
 **Разбор находок:**
 
@@ -160,13 +160,13 @@ docker run --rm --network labnet -v "$PWD:/zap/wrk:rw" \
 
 | Уязвимость | Risk | CVSS | OWASP Top 10 | Контрмера |
 |---|---|---|---|---|
-| SQL Injection (форма входа) | High | 9.8 | A03:2021 — Injection | Параметризованные запросы / ORM |
-| Cross-Site Scripting (XSS) | High | 6.1 | A03:2021 — Injection | Экранирование вывода + CSP |
-| CSP Header Not Set | Medium | 6.5 | A05:2021 — Misconfiguration | Строгая политика CSP |
-| CORS Misconfiguration | Medium | 5.3 | A05:2021 — Misconfiguration | Белый список источников |
-| Cross-Domain Misconfiguration | Medium | 5.3 | A05:2021 — Misconfiguration | Белый список доменов |
-| Backup File Disclosure | Medium | 5.3 | A05:2021 — Misconfiguration | Удаление служебных файлов |
-| Bypassing 403 | Medium | 5.3 | A01:2021 — Broken Access Control | Контроль доступа на сервере |
+| SQL Injection (форма входа) | High | 9.8 | A05:2025 — Injection | Параметризованные запросы / ORM |
+| Cross-Site Scripting (XSS) | High | 6.1 | A05:2025 — Injection | Экранирование вывода + CSP |
+| CSP Header Not Set | Medium | 6.5 | A02:2025 — Misconfiguration | Строгая политика CSP |
+| CORS Misconfiguration | Medium | 5.3 | A02:2025 — Misconfiguration | Белый список источников |
+| Cross-Domain Misconfiguration | Medium | 5.3 | A02:2025 — Misconfiguration | Белый список доменов |
+| Backup File Disclosure | Medium | 5.3 | A02:2025 — Misconfiguration | Удаление служебных файлов |
+| Bypassing 403 | Medium | 5.3 | A01:2025 — Broken Access Control | Контроль доступа на сервере |
 
 ## 6. Рекомендации
 
